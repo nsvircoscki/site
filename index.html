@@ -8,11 +8,10 @@
 </head>
 <body class="min-h-screen flex flex-col">
     <header>
-        <nav class="bg-blue-100 border-gray-400 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <nav class="bg-blue-100 border-gray-400 px-4 lg:px-6 py-2.5 dark:bg-white-800">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="index.html" class="flex items-center">
                     <img src="img/snowicon-removebg-preview.png" class="mr-3 h-16 sm:h-12" alt="logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Nome</span>
                 </a>
                 <div class="flex items-center lg:order-2">
                     <a href="entrar.html" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Entrar</a>
@@ -25,30 +24,65 @@
                 <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
-                            <a href="index.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Página Inicial</a>
+                            <a href="index.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-700 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700">Página Inicial</a>
                         </li>
                         <li>
-                            <a href="skidays.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Ski Days</a>
+                            <a href="skidays.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-700 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700">Ski Days</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Montanha</a>
+                            <a href="montanha.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-700 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700">Montanha</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Hospedagens</a>
+                            <a href="hospedagens.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-700 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700">Hospedagens</a>
                         </li>
                         <li>
-                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contato</a>
+                            <a href="#" data-drawer-target="drawer-contact" data-drawer-show="drawer-contact" aria-controls="drawer-contact"
+                               class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-700 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700">
+                                Contato
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- drawer component -->
+<div id="drawer-contact" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-contact-label">
+   <h5 id="drawer-label" class="inline-flex items-center mb-6 text-base font-semibold text-gray-500 uppercase dark:text-gray-400"><svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+  </svg>Entre em contato</h5>
+   <button type="button" data-drawer-hide="drawer-contact" aria-controls="drawer-contact" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+      <span class="sr-only">Close menu</span>
+   </button>
+   <form class="mb-6">
+      <div class="mb-6">
+         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Seu e-mail</label>
+         <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required />
+      </div>
+      <div class="mb-6">
+         <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Assunto</label>
+         <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Let us know how we can help you" required />
+      </div>
+      <div class="mb-6">
+         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mensagem</label>
+         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block">Send message</button>
+   </form>
+   <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+      <a href="#" class="hover:underline">neve@company.com</a>
+   </p>
+</div>
     
 
     <div id="default-carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="10000">
         <!-- Carousel wrapper -->
-        <div class="relative overflow-hidden rounded-lg" style="height: 700px;">
+        <div class="relative overflow-hidden" style="height: 400px;">
              <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="img/montneve.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -97,85 +131,113 @@
         </button>
     </div>
         
-    <div class="flex flex-wrap gap-4 px-16">
-        <!-- Card 1 -->
-  
-        <div class="ml-auto mt-8 max-w-sm bg-blue-100 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                <img class="rounded-t-lg" src="img/Valle-Nevado-Ski-Resort.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 px-16 gap-4">
+        <div class="mt-8 bg-blue-100 border border-gray-200 rounded-lg shadow-sm dark:bg-white-800 dark:border-white-700">
+          <img class="rounded-t-lg h-48 w-full object-cover" src="img/Valle-Nevado-Ski-Resort.jpg" alt="" />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-800">Aulas para Todos os Níveis</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+              Oferecemos aulas de esqui e snowboard para iniciantes, intermediários e avançados. Nossos instrutores adaptam o ensino ao seu ritmo, garantindo aprendizado seguro e divertido.
+            </p>
+          </div>
         </div>
-
-
-<div class="ml-auto mt-8 max-w-sm bg-blue-100 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-        <img class="rounded-t-lg" src="img/familia-se-divertindo-no-inverno.jpg" alt="" />
-    </a>
-    <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    </div>
-</div>
-
-
-<div class="mr-auto mt-8 max-w-sm bg-blue-100 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-        <img class="rounded-t-lg" src="img/valle-nevado.jpg" alt="" />
-    </a>
-    <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    </div>
-</div>
+      
+        <div class="mt-8 bg-blue-100 border border-gray-200 rounded-lg shadow-sm dark:bg-white-800 dark:border-white-700">
+          <img class="rounded-t-lg h-48 w-full object-cover" src="img/familia-se-divertindo-no-inverno.jpg" alt="" />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-800">Diversão em Família</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+              Aproveite momentos inesquecíveis com toda a família em um ambiente acolhedor, com atividades para todas as idades e muita diversão na neve.
+            </p>
+          </div>
+        </div>
+      
+        <div class="mt-8 bg-blue-100 border border-gray-200 rounded-lg shadow-sm dark:bg-white-800 dark:border-white-700">
+          <img class="rounded-t-lg h-48 w-full object-cover" src="img/valle-nevado.jpg" alt="" />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-800">Paisagens Incríveis</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+              Desfrute de vistas deslumbrantes das montanhas cobertas de neve e viva experiências únicas em meio à natureza exuberante dos Andes chilenos.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
 
 <div>
-    <a class="block max-w-5xl p-6 bg-blue-100 border border-blue-100 rounded-lg shadow-sm hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-    <h1 style="font-size: 50px;"><b>Refúgio Nevado nos Andes Chilenos</b></h1>
-    </br>
-    <h2 style="font-size: 20px;">Encante-se com as majestosas paisagens de inverno na Cordilheira dos Andes, no Chile. O resort aconchegante, localizado próximo ao Valle Nevado, oferece conforto e elegância em cada detalhe. Delicie-se com a gastronomia refinada e relaxe em acomodações aquecidas por lareiras. Admire a imensidão da neve branca sob o céu azul e viva experiências de pura magia.</h2>
-    </br>
-    <h3 style="font-size: 30px;"><b>Experiências Únicas:</b></h3>
-    </br>
-    <h4 style="font-size: 20px;"><b>Vista Deslumbrante: Panoramas incríveis dos picos nevados do Valle Nevado.</b></h4>
-     </br>
-    <h4 style="font-size: 20px;"><b>Conforto Luxuoso: Chalés elegantes e suítes aconchegantes, todos aquecidos por lareiras.</b></h4>
-     </br>
-    <h4 style="font-size: 20px;"><b>Aventura na Neve: Esqui, snowboard e passeios exclusivos pelas trilhas alpinas.</b></h4>
+    <h1 class="font-bold tracking-tight text-gray-800" style="font-size: 50px; margin-left:50px;"><b>Refúgio Nevado nos Andes Chilenos</b></h1>
+    <h2 class="font-bold tracking-tight text-gray-700" style="font-size: 20px; margin-left: 50px;">Encante-se com as majestosas paisagens de inverno na Cordilheira dos Andes, no Chile. O resort aconchegante, localizado próximo ao Valle Nevado, oferece conforto e elegância em cada detalhe. Delicie-se com a gastronomia refinada e relaxe em acomodações aquecidas por lareiras. Admire a imensidão da neve branca sob o céu azul e viva experiências de pura magia.</h2>
+    <h3 class="font-bold tracking-tight text-gray-700" style="font-size: 30px; margin-left:50px; margin-top: 20px;"><b>Experiências Únicas:</b></h3>
+    <h4 class="font-bold tracking-tight text-gray-700" style="font-size: 20px; margin-left:50px; margin-top: 20px;"><b>Vista Deslumbrante: Panoramas incríveis dos picos nevados do Valle Nevado.</b></h4>
+    <h4 class="font-bold tracking-tight text-gray-700" style="font-size: 20px; margin-left:50px; margin-top: 10px;"><b>Conforto Luxuoso: Chalés elegantes e suítes aconchegantes, todos aquecidos por lareiras.</b></h4>
+    <h4 class="font-bold tracking-tight text-gray-700" style="font-size: 20px; margin-left:50px; margin-top: 10px;"><b>Aventura na Neve: Esqui, snowboard e passeios exclusivos pelas trilhas alpinas.</b></h4>
 
     </a>
 </div>
 
     
 
-<footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
+<footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-white-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="index.html" class="hover:underline">site™</a>. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline">Contact</a>
-        </li>
-    </ul>
     </div>
 </footer>
 
     
 
-
-
+<!-- Contato Drawer -->
+<div id="drawer-contact" class="fixed top-0 right-0 z-40 w-80 h-screen p-4 overflow-y-auto transition-transform transform bg-white rounded-l-lg shadow-md sm:max-w-md"
+     tabindex="-1" aria-labelledby="drawer-label" style="display: none;">
+    <div class="flex items-center justify-between mb-4">
+        <h5 id="drawer-label" class="text-base font-semibold text-gray-900 dark:text-white">Contato</h5>
+        <button type="button" data-drawer-hide="drawer-contact" aria-controls="drawer-contact"
+                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-md">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Fechar menu</span>
+        </button>
+    </div>
+    <div class="flex flex-col gap-4">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+            Entre em contato conosco através do formulário abaixo ou pelos nossos canais de atendimento.
+        </p>
+        <form action="#" method="POST" class="flex flex-col gap-4">
+            <div>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome</label>
+                <input type="text" id="name" name="name" required
+                       class="block w-full p-2.5 text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-white-900 dark:border-white-700 dark:focus:ring-blue-500 dark:focus:outline-none"
+                       placeholder="Seu nome completo">
+            </div>
+            <div>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail</label>
+                <input type="email" id="email" name="email" required
+                       class="block w-full p-2.5 text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-white-900 dark:border-white-700 dark:focus:ring-blue-500 dark:focus:outline-none"
+                       placeholder="Seu melhor e-mail">
+            </div>
+            <div>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mensagem</label>
+                <textarea id="message" name="message" rows="4" required
+                          class="block w-full p-2.5 text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-white-900 dark:border-white-700 dark:focus:ring-blue-500 dark:focus:outline-none"
+                          placeholder="Sua mensagem"></textarea>
+            </div>
+            <button type="submit"
+                    class="w-full px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700">
+                Enviar Mensagem
+            </button>
+        </form>
+        <div class="flex flex-col gap-2 mt-4">
+            <span class="text-sm font-medium text-gray-900 dark:text-white">Ou entre em contato pelo telefone:</span>
+            <a href="tel:+5511999999999" class="text-sm text-blue-600 dark:text-blue-500 hover:underline">
+                +55 11 99999-9999
+            </a>
+        </div>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
